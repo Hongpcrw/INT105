@@ -5,9 +5,12 @@ package warmup02;
 class Student {
     private long id;
     private String name;
+    private static int count;
 
     public Student(String name) {
         this.name = name;
+        count++;
+        id=count;
     }
 
     public long getId() {
@@ -24,7 +27,7 @@ class Student {
 
     @Override
     public String toString() {
-        return "Id:" + id + "\t" + name;
+        return "Id:" + id + "\t" + name+"\t All student :"+count;
     }    
     
     
